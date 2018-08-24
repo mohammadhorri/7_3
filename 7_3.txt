@@ -1,0 +1,48 @@
+ÈÑäÇãå Çí ˜å ÇÚÏÇÏ Èíä 1ÊÇ100 ÑÇ ÈíÑÏ æ ÒãÇäí ˜å ˜ÇÑÈÑ ÕİÑ ÑÇ æÇÑÏ ˜äÏ ÊÚÏÇÏ Ê˜ÑÇÑ åÑ ÚÏÏ ÑÇ äãÇíÔ ÏåÏ
+
+        int length,number;
+        int[] intArray;
+        System.out.print("Enter length of array:"); 
+        Scanner len= new Scanner(System.in);
+        length=len.nextInt();
+        intArray = new int[length];
+        System.out.println("Enter the integers between 1 and 100(Enter zero for the end):");   
+         for(int i=0;i<length;i++)
+          {
+            Scanner num= new Scanner(System.in);
+            number=len.nextInt();
+             if(number<=100)
+              {
+               intArray[i]=number;
+              }
+             else
+             {
+              System.out.println("Enter the integers between 1 and 100:");    
+             } 
+              if(number==0)
+               {
+                break;
+               }
+          }
+         for(int numbers=1;numbers<=100;numbers++)
+         {
+          int Counter=0;
+            for(int i=0;i<length;i++)
+             {
+              if(intArray[i]==numbers)
+               {
+                 Counter++;
+               }        
+             }
+           if (Counter!=0)
+            {
+               if(Counter==1)
+                {
+                  System.out.println(String.format("%d occur:%dtime",numbers,Counter));  
+                }
+               else
+               {
+                  System.out.println(String.format("%d occur:%dtimes",numbers,Counter)); 
+               }
+            }             
+          }
